@@ -4,8 +4,8 @@ phases:
   pre_build:
     commands:
       - echo Starting build...
-      - echo Access Key is `echo $AWS_ACCESS_KEY`
-      - echo Secret Key is `echo $AWS_SECRET_KEY`
+      - echo Dump keys...
+      - cat ~/.aws/credentials 
       - echo Listing S3 buckets...
       - aws s3api list-buckets --query 'Buckets[].Name'
   build:
