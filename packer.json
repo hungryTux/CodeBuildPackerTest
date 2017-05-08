@@ -1,6 +1,8 @@
 {
   "builders": [{
     "type": "amazon-ebs",
+    "aws_access_key_id": "{{env `AWS_ACCESS_KEY`}}",
+    "aws_secret_key": "{{env `AWS_SECRET_KEY`}}",
     "region": "us-east-1",
     "source_ami": "ami-4a83175c",
     "instance_type": "t2.micro",
