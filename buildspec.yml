@@ -1,0 +1,13 @@
+version: 0.1
+
+phases:
+  pre_build:
+    commands:
+      - echo Starting build...
+  build:
+    commands:
+      - echo Building the AMI using Packer...          
+      - `packer build -machine-readable packer-example.json | awk -F, '$0 ~/artifact,0,id/ {print $6}'`
+  post_build:
+    commands:
+      - echo Build completed on `date`
