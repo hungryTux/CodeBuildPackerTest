@@ -5,7 +5,8 @@
     "source_ami": "ami-4a83175c",
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
-    "ami_name": "packer-ami {{timestamp}}"
+    "ami_name": "packer-ami {{timestamp}}",
+    "ami_virtualization_type": "hvm"
   }],
   "provisioners": [{
     "type": "shell",
